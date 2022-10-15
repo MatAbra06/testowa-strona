@@ -1,0 +1,463 @@
+@use "./main" as *;
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: background-color 0.5s;
+	z-index: 1;
+
+	&__desktop {
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem 0;
+		transition: padding 0.5s;
+
+		&--link {
+			font-size: 2.5rem;
+			transition: color 0.3s;
+
+			&:hover{
+				color: $main;
+			}
+		}
+
+		&--logo {
+			width: 175px;
+			object-fit: cover;
+			transition: transform 0.5s;
+		}
+	}
+
+	&__mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem;
+		transition: padding 0.5s;
+
+		&--logo {
+			width: 150px;
+			transition: transform 0.5s;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 70vw;
+		background-color: $main;
+		padding: 2rem;
+		transform: translateX(-100%);
+		transition: transform 0.5s;
+
+		&--logo {
+			width: 200px;
+			margin-bottom: 3rem;
+		}
+
+		&--link {
+			font-size: 3rem;
+			margin: 1rem 0;
+			color: #fff;
+		}
+
+		&--paragraph {
+			font-size: 1.2rem;
+			margin-top: auto;
+			color: #fff;
+		}
+	}
+}
+
+.header {
+	text-align: center;
+
+	.wrapper {
+		margin-top: 116.39px;
+		height: calc(100vh - 116.39px);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.h1 {
+		margin-bottom: -0.5rem;
+	}
+
+	.text {
+		display: none;
+		margin: 1.5rem 0;
+	}
+
+	&__btns {
+		width: 100%;
+
+		.btn {
+			width: 100%;
+		}
+
+		.btn1 {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		max-width: 500px;
+	}
+}
+
+.offer {
+	.second-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		max-width: 400px;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+		border-radius: 20px;
+		padding: 2rem;
+		text-align: center;
+		cursor: pointer;
+		transition: transform 0.3s;
+
+		&--img {
+			width: 100%;
+			height: 220px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&:hover {
+			transform: scale(0.9);
+		}
+	}
+}
+
+.family {
+	background-image: url("../img/family-small-min.jpg");
+}
+
+.taxi {
+	background-image: url("../img/taxi-small-min.jpg");
+}
+
+.howbuy {
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.h2 {
+		&::before {
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	.box {
+		display: flex;
+		justify-content: center;
+		gap: 4rem;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+
+	&__tile {
+		max-width: 250px;
+		text-align: center;
+
+		&--img {
+			max-width: 100%;
+			height: 150px;
+			object-fit: cover;
+		}
+
+		&--link{
+			&:hover{
+				color: $main;
+			}
+		}
+	}
+}
+
+.howbuy__tile:nth-of-type(1) {
+	.howbuy__tile--img {
+		background-image: url("../img/1-small-min.jpg");
+	}
+}
+.howbuy__tile:nth-of-type(2) {
+	.howbuy__tile--img {
+		background-image: url("../img/2-small-min.jpg");
+	}
+}
+.howbuy__tile:nth-of-type(3) {
+	.howbuy__tile--img {
+		background-image: url("../img/3-small-min.jpg");
+	}
+}
+.howbuy__tile:nth-of-type(4) {
+	.howbuy__tile--img {
+		background-image: url("../img/4-small-min.jpg");
+	}
+}
+
+.aboutus {
+	.second-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__img {
+		display: none;
+	}
+}
+
+.incounts {
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.box {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	&__tile {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		max-width: 270px;
+		text-align: center;
+
+		&--number {
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 4rem;
+		}
+
+		.invisible {
+			display: none;
+		}
+	}
+}
+
+.contact {
+	.second-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.h2 {
+		&::before {
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	label {
+		font-weight: bold;
+		font-size: 2rem;
+		margin-left: 0.5rem;
+	}
+
+	input,
+	textarea {
+		font-family: inherit;
+		width: 100%;
+		font-size: 1.8rem;
+		padding: 1.25rem;
+		border-radius: 1rem;
+		border: 1px solid black;
+		outline-color: $main;
+	}
+
+	textarea {
+		height: 150px;
+		resize: vertical;
+	}
+
+	.box {
+		width: 100%;
+	}
+
+	.btn {
+		margin-top: 0.5rem;
+	}
+
+	.error {
+		font-size: 1.5rem;
+		color: red;
+		margin-top: 0.5rem;
+	}
+}
+
+@media (min-width: 576px) {
+	.header {
+		text-align: center;
+
+		.wrapper {
+			align-items: center;
+		}
+
+		&__btns {
+			.btn {
+				width: 80%;
+			}
+		}
+	}
+	.aboutus {
+		&__img {
+			display: block;
+			float: right;
+			width: 50%;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		&__desktop {
+			display: flex;
+		}
+		&__mobile {
+			display: none;
+		}
+	}
+	.header {
+		&__btns {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			.btn {
+				min-width: 350px;
+				font-size: 2.4rem;
+			}
+
+			.btn1 {
+				margin-bottom: 0;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+
+	.howbuy {
+		.h2 {
+			&::before {
+				left: -10%;
+				width: 120%;
+			}
+		}
+	}
+
+	.contact {
+		.h2 {
+			&::before {
+				left: -10%;
+				width: 120%;
+			}
+		}
+
+		.box {
+			&:nth-of-type(1),
+			&:nth-of-type(2) {
+				max-width: calc(50% - 0.5rem);
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.header {
+		text-align: left;
+		.wrapper {
+			justify-content: center;
+			align-items: start;
+		}
+
+		.h1 {
+			margin-bottom: 1rem;
+			font-size: 5rem;
+		}
+
+		.h2-header {
+			font-size: 2.5rem;
+		}
+
+		&__text {
+			max-width: 50%;
+
+			.text {
+				display: block;
+				font-size: 2rem;
+				max-width: 500px;
+				margin: 4rem 0;
+			}
+		}
+		&__img {
+			position: absolute;
+			z-index: -1;
+			width: 50%;
+			right: 5%;
+			transform: translateX(0) translateY(-5%);
+			max-width: none;
+		}
+
+		&__btns {
+			width: 50%;
+			justify-content: start;
+
+			.btn {
+				max-width: none;
+				width: 450px;
+			}
+
+			.btn1 {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,379 @@
+@use "./fonts" as *;
+
+// colors
+
+$main: #0071db;
+$hover: #0057a8;
+$bright: #339cff;
+$brighter: #81bff9;
+
+// reset
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	transition: color 0.3s;
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
+	font-family: inherit;
+}
+
+body {
+	font-size: 1.7rem;
+	background-color: #fff;
+	color: #000;
+	font-family: $regular;
+}
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #cccccc;
+	border-radius: 20px;
+}
+
+
+// components
+
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.second-wrapper {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.white-space {
+	margin: 100rem 0;
+}
+
+.h1 {
+	font-size: 4.5rem;
+	font-weight: 700;
+}
+
+.h2-header {
+	font-size: 2.2rem;
+	font-weight: 400;
+	font-weight: 500;
+}
+
+.btn {
+	position: relative;
+	padding: 1rem 3rem;
+	font-size: 2rem;
+	font-weight: 500;
+	border-radius: 150px;
+	border: 1px solid transparent;
+	background-color: transparent;
+	overflow: hidden;
+
+	.circle {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		background-color: $brighter;
+		border-radius: 50%;
+		animation: pulse 1s forwards;
+	}
+}
+
+.btn1 {
+	background-color: $main;
+	color: #fff;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: $hover;
+	}
+}
+
+.btn2 {
+	outline: 4px solid $main;
+	outline-offset: -4px;
+	color: #000;
+	transition: color 0.3s, outline-color 0.3s, background-color 0.3s;
+
+	&:hover {
+		background-color: $hover;
+		color: #fff;
+		outline-color: $hover;
+	}
+}
+
+.h2 {
+	position: relative;
+	font-size: 3rem;
+	font-weight: 400;
+	display: inline;
+	margin-bottom: 5rem;
+	text-align: center;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -7.5px;
+		left: -10%;
+		display: block;
+		height: 4px;
+		width: 120%;
+		background-color: $main;
+	}
+}
+
+.section {
+	margin: 5rem 0;
+	scroll-margin-top: calc(81.5px + 2rem);
+}
+
+.h3 {
+	font-weight: normal;
+	font-size: 2.4rem;
+}
+// js-classes
+
+.active {
+	transform: translateX(0) !important;
+}
+
+// animations
+
+@keyframes pulse {
+	from {
+		scale: 0.1;
+		opacity: 1;
+	}
+	to {
+		scale: 3;
+		opacity: 0;
+	}
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+	padding: 15px 0 15px 15px;
+	display: inline-block;
+	cursor: pointer;
+	transition-property: opacity, filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	overflow: visible;
+	z-index: 1000;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+	background-color: #000;
+}
+
+.hamburger-active {
+	.hamburger-box {
+		.hamburger-inner {
+			background-color: rgb(255, 255, 255);
+			&::before {
+				background-color: rgb(255, 255, 255);
+			}
+			&::after {
+				background-color: rgb(255, 255, 255);
+			}
+		}
+	}
+}
+
+.hamburger-box {
+	width: 40px;
+	height: 24px;
+	display: inline-block;
+	position: relative;
+}
+
+.hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	width: 40px;
+	height: 4px;
+	background-color: #000;
+	border-radius: 4px;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+	content: "";
+	display: block;
+}
+.hamburger-inner::before {
+	top: -10px;
+}
+.hamburger-inner::after {
+	bottom: -10px;
+}
+
+.hamburger--spin .hamburger-inner {
+	transition-duration: 0.22s;
+	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+	transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+	transition: bottom 0.1s 0.25s ease-in,
+		transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+	transform: rotate(225deg);
+	transition-delay: 0.12s;
+	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+	top: 0;
+	opacity: 0;
+	transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+	bottom: 0;
+	transform: rotate(-90deg);
+	transition: bottom 0.1s ease-out,
+		transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.footer {
+	background-color: #eee;
+
+	.wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+	}
+
+	&__h2 {
+		font-weight: normal;
+		text-align: center;
+		font-size: 2.4rem;
+		width: 100%;
+		margin-bottom: 1.5rem;
+	}
+
+	&__img {
+		max-width: 225px;
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		&--icon {
+			width: 30px;
+			height: 30px;
+			object-fit: contain;
+		}
+
+		&--fb{
+			&:hover{
+				color: $main;
+			}
+		}
+	}
+
+	.box {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.box2 {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	&__footer {
+		text-align: center;
+		border-top: 1px solid #000;
+
+		&--paragraph {
+			padding: 1rem;
+			font-size: 1.3rem;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.btn {
+		padding: 1rem 4rem;
+	}
+	.footer {
+		&__h2 {
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.section {
+		scroll-margin-top: calc(94px + 2rem);
+	}
+}
+
+@media (min-width: 992px) {
+	.footer {
+		.wrapper {
+			justify-content: space-between;
+		}
+		.box {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 2rem;
+		}
+
+		&__h2 {
+			margin-bottom: 0.5rem;
+			text-align: left;
+		}
+	}
+}

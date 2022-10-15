@@ -1,0 +1,189 @@
+@use './main' as *;
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+    background-color: $main;
+
+	&__desktop {
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem 0;
+
+		&--link {
+			font-size: 2.5rem;
+			transition: color 0.3s;
+            color: #fff;
+
+			&:hover{
+				color: black;
+			}
+		}
+
+		&--logo {
+			width: 122.5px;
+			object-fit: cover;
+			transition: transform 0.5s;
+		}
+	}
+
+	&__mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        padding: 1rem 0;
+		transition: padding 0.5s;
+
+		&--logo {
+			width: 105px;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 70vw;
+		background-color: $main;
+		padding: 2rem;
+		transform: translateX(-100%);
+		transition: transform 0.5s;
+
+		&--logo {
+			width: 200px;
+			margin-bottom: 3rem;
+		}
+
+		&--link {
+			font-size: 3rem;
+			margin: 1rem 0;
+			color: #fff;
+		}
+
+		&--paragraph {
+			font-size: 1.2rem;
+			margin-top: auto;
+			color: #fff;
+		}
+	}
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+	background-color: rgb(255, 255, 255);
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	background-color: rgb(255, 255, 255);
+}
+
+.section:first-of-type{
+    margin-top: calc(5rem + 80.4px)
+}
+
+.ourcars{
+    .h2{
+        margin-bottom: 3rem;
+    }
+    .h3{
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 0.5rem;
+        text-align: center;
+    }
+    .second-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        padding: 2rem;
+        width: 300px;
+
+        &--title{
+            font-size: 2.4rem;
+            margin-bottom: 2rem;
+        }
+
+        &--img{
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+        }
+    }
+
+    .box3{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 576px){
+    .ourcars{
+        &__card{
+            width: 400px;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .nav{
+        &__desktop{
+            display: flex;
+        }
+        &__mobile{
+            display: none;
+        }
+    }
+    .section:first-of-type{
+        margin-top: calc(5rem + 98px)
+    }
+    .ourcars{
+        &__card{
+            width: 350px;
+        }
+        .box{
+            align-items: flex-start;
+        }
+    }
+}
+
+@media (min-width: 992px){
+    .ourcars{
+        &__card{
+            width: 400px;
+        }
+    }
+}

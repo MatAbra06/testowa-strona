@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Document</title>
+
+    <link rel="canonical" href="">
+
+    <meta name="author" content="Mateusz Abrahamowicz">
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/icons/favicon-16x16.png">
+    <link rel="manifest" href="./src/icons/site.webmanifest">
+
+    <link rel="stylesheet" href="./dist/css/index.min.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="wrapper">
+            <div class="nav__desktop">
+                <a class="nav__desktop--link" href="#">Home</a>
+                <a class="nav__desktop--link" href="#offer">Oferta</a>
+                <a href="/"><img class="nav__desktop--logo" src="./dist/img/logo-min.png" alt="Logo Brumbrumki"></a>
+                <a class="nav__desktop--link" href="#aboutus">O nas</a>
+                <a class="nav__desktop--link" href="#contact">Kontakt</a>
+            </div>
+        </div>
+        <div class="nav__mobile">
+            <a href="/"><img class="nav__mobile--logo" src="./dist/img/logo-min.png" alt="Logo Brumbrumki"></a>
+            <button class="hamburger hamburger--spin" type="button" aria-label="przycisk menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+        <div class="nav__menu">
+            <a href="/"><img class="nav__menu--logo" src="./dist/img/logo2-min.png" alt="Logo Brumbrumki"></a>
+            <a class="nav__menu--link" href="#">Home</a>
+            <a class="nav__menu--link" href="#offer">Oferta</a>
+            <a class="nav__menu--link" href="#aboutus">O nas</a>
+            <a class="nav__menu--link" href="#contact">Kontakt</a>
+            <p class="nav__menu--paragraph">Brumbrumki Polska Sp.zoo 2022</p>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__text">
+                <h1 class="h1">BrumBrumki</h1>
+                <h2 class="h2-header">Najtańsza wypożyczalnia samochodów osobowych w Polsce</h2>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut excepturi dicta at dolores
+                    facilis veniam
+                    porro. Ullam, expedita harum aliquam eum commodi, natus temporibus ea odit nostrum accusantium, quos
+                    id.
+                </p>
+            </div>
+            <img class="header__img" src="./dist/img/main-large-min.jpg" alt="">
+            <div class="header__btns">
+                <a href=""><button class="btn btn1">Wypożycz samochód</button></a>
+                <a href="#offer"><button class="btn btn2">Sprawdź ofertę</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section offer" id="offer">
+            <div class="second-wrapper">
+                <h2 class="h2">Nasza oferta</h2>
+                <div class="box">
+                    <a href="./samochody.html"><div class="offer__card">
+                        <h3 class="h3">Wszystkie samochody</h3>
+                        <div class="offer__card--img family"></div>
+                        <p>Samochody miejskie, rodzinne, vany, 7-osobowe, busy 8,9 osobowe</p>
+                    </div></a>
+                    <a href="./wynajem.html"><div class="offer__card">
+                        <h3 class="h3">Rodzaje najmu</h3>
+                        <div class="offer__card--img taxi"></div>
+                        <p>Wynajem prywatny, długoterminowy, Taxi, Uber, Bolt, FreeNow</p>
+                    </div></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="second-wrapper">
+                <h2 class="h2"></h2>
+            </div>
+        </section>
+
+        <section class="section howbuy">
+            <div class="wrapper">
+                <h2 class="h2">Jak wynająć u nas samochód?</h2>
+                <div class="box">
+                    <div class="howbuy__tile">
+                        <img src="./dist/img/1-small-min.jpg" alt="" class="howbuy__tile--img">
+                        <p class="howbuy__tile--paragraph">Zarezerwuj dzień, na który potrzebujesz samochodu na calendly
+                            <a class="howbuy__tile--link" href="">[link]</a></p>
+                    </div>
+                    <div class="howbuy__tile">
+                        <img src="./dist/img/2-small-min.jpg" alt="" class="howbuy__tile--img">
+                        <p class="howbuy__tile--paragraph">Opisz jakiego samochodu potrzebujesz, jaki rodzaj wynajmu Cię
+                            interesuję oraz na jaki okres potrzebujesz samochodu</p>
+                    </div>
+                    <div class="howbuy__tile">
+                        <img src="./dist/img/3-small-min.jpg" alt="" class="howbuy__tile--img">
+                        <p class="howbuy__tile--paragraph">Wyślij formularz</p>
+                    </div>
+                    <div class="howbuy__tile">
+                        <img src="./dist/img/4-small-min.jpg" alt="" class="howbuy__tile--img">
+                        <p class="howbuy__tile--paragraph">Gotowe! Teraz zadzwonimy do ciebie i uzgodnimy szczegóły
+                            transakcji</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section aboutus" id="aboutus">
+            <div class="second-wrapper">
+                <h2 class="h2">O nas</h2>
+                <div class="box">
+                    <img src="./dist/img/aboutus-small-min.jpg" alt="" class="aboutus__img">
+                    <p class="aboutus__paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, quia.
+                        Quidem, dolorum totam illum cumque assumenda dolore a amet, debitis velit temporibus numquam
+                        voluptate doloremque nihil minima? Saepe, officia similique!
+                        <br><br>
+                        Dolore facilis tenetur sint unde numquam in alias doloremque excepturi sapiente culpa rerum iure
+                        optio ratione iusto deleniti dolorum ea, eius quas non quasi. Eaque velit expedita delectus
+                        itaque possimus!
+                        <br><br>
+                        Voluptate aliquid adipisci debitis facilis doloremque nisi delectus architecto laudantium sint,
+                        sed veniam deserunt consequatur totam quisquam! Odio laborum illum ipsam pariatur officia ea, ex
+                        neque voluptatem debitis incidunt. A!
+                        Temporibus maxime molestiae suscipit voluptas tempore excepturi accusamus aspernatur,
+                        perspiciatis similique delectus eum sint, ex odio nulla veritatis laudantium dignissimos quod
+                        provident sit laborum dolor repellendus ratione quibusdam omnis. Aperiam!
+                        <br><br>
+                        Natus tenetur nesciunt, ut sunt rem odio reprehenderit accusamus nisi aliquid excepturi at porro
+                        dicta. Nemo aliquid fugit, itaque optio animi officiis blanditiis commodi quod. Placeat dolorem
+                        beatae eos accusamus!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section incounts">
+            <div class="wrapper">
+                <h2 class="h2">W liczbach</h2>
+                <div class="box">
+                    <div class="incounts__tile">
+                        <p class="incounts__tile--number"><span class="number">0</span> gr/km</p>
+                        <div class="invisible" data-number="17">0</div>
+                        <p class="incounts__tile--paragraph">ceny paliw już nawet od 17 groszy za kilometr!</p>
+                    </div>
+                    <div class="incounts__tile">
+                        <p class="incounts__tile--number"><span class="number">0</span>
+                        <div class="invisible" data-number="27">0</div>
+                        </p>
+                        <p class="incounts__tile--paragraph">ponad 27 zwiedzonych krajów naszymi samochodami</p>
+                    </div>
+                    <div class="incounts__tile">
+                        <p class="incounts__tile--number"><span class="number">0</span>%
+                        <div class="invisible" data-number="97">0</div>
+                        </p>
+                        <p class="incounts__tile--paragraph">średnio 97% zadowolonych klientów</p>
+                    </div>
+                    <div class="incounts__tile">
+                        <p class="incounts__tile--number"><span class="number">0</span> km
+                        <div class="invisible" data-number="9500.1">0</div>
+                        </p>
+                        <p class="incounts__tile--paragraph">średnio przejeżdżanych w ciągu jednego dnia naszymi
+                            samochodami</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="second-wrapper">
+                <h2 class="h2">Skontaktuj się z nami!</h2>
+                <form action="https://formsubmit.co/matabra06@gmail.com" method="POST" class="contact__form" id="form">
+                    <div class="box">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" placeholder="Jan Kowalski" name="Imię i nazwisko">
+                        <div class="error"></div>
+                    </div>
+                    <div class="box">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="jankowalski@poczta.pl" name="Email">
+                        <div class="error"></div>
+                    </div>
+                    <div class="box">
+                        <label for="topic">Temat</label>
+                        <input type="text" id="topic" placeholder="Wynajem długoterminowy" name="Temat">
+                        <div class="error"></div>
+                    </div>
+                    <div class="box">
+                        <label for="msg">Wiadomość</label>
+                        <textarea id="msg" placeholder="Twoja wiadomość..." name="Wiadomość"></textarea>
+                        <div class="error"></div>
+                    </div>
+                    <button class="btn btn1" type="submit" id="btn-send">Wyślij wiadomość</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="wrapper">
+        <div class="box3">
+            <h2 class="footer__h2">BrumBrumki Polska Sp.zoo</h2>
+            <div class="box">
+                <div class="box2">
+                    <div class="footer__info">
+                        <img class="footer__info--icon" src="./src/icons/location.svg" alt="">
+                        <p class="footer__paragraph">00-000 Warszawa, Towarowa 5</p>
+                    </div>
+                    <div class="footer__info">
+                        <img class="footer__info--icon" src="./src/icons/tel.svg" alt="">
+                        <p class="footer__paragraph">+48 123 456 789</p>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="footer__info">
+                        <img class="footer__info--icon" src="./src/icons/mail.svg" alt="">
+                        <p class="footer__paragraph">kontakt@brumbrumki.com</p>
+                    </div>
+                    <div class="footer__info">
+                        <img class="footer__info--icon" src="./src/icons/fb.svg" alt="">
+                        <a class="footer__info--fb" target="_blank" href="https://www.facebook.com/BrumBrumki"><p class="footer__paragraph">BrumBrumki</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="/"><img class="footer__img" src="./dist/img/logo-min.png" alt="Logo BrumBrumki"></a>
+    </div>
+    <div class="footer__footer">
+        <p class="footer__footer--paragraph">BrumBrumki Polska Sp.zoo 2022 &copy; Wszelkie prawa zastrzeżone</p>
+    </div>
+</footer>
+
+    <script src="./dist/js/index.min.js"></script>
+</body>
+
+</html>
